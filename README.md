@@ -67,13 +67,8 @@ graph TB
 /
 ├── README.md
 ├── DECISIONS.md
-├── screenshots/
-│   ├── 01-vmware-network-editor.png
-│   ├── 02-server-manager-addds.png
-│   ├── 03-active-directory-users-computers.png
-│   └── 04-dhcp-scope.png
-└── scripts/
-    └── (scripts de backup, futuramente)
+├── screenshots/   # capturas de tela numeradas, na ordem em que as etapas foram feitas
+└── scripts/       # scripts de automação (ex: backup), conforme forem criados
 ```
 
 ## Autor
