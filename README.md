@@ -24,7 +24,7 @@ graph TB
 
     subgraph VMnet2["VMnet2 - Rede de Servidores (192.168.10.0/24)"]
         DC01["DC01<br/>Windows Server 2022<br/>AD DS + DNS + DHCP<br/>192.168.10.10"]
-        LINUX["Linux Server<br/>Ubuntu/Debian<br/>Nginx ou banco de dados<br/>(a definir)"]
+        LINUX["LINUX-SRV01<br/>Ubuntu Server + Nginx<br/>192.168.10.20"]
     end
 
     subgraph VMnet3["VMnet3 - Rede de Clientes/DMZ (192.168.20.0/24)"]
@@ -43,7 +43,7 @@ graph TB
 |---|---|
 | Hypervisor | VMware Workstation Pro |
 | Sistema Windows | Windows Server 2022 Evaluation |
-| Sistema Linux | Ubuntu/Debian (a definir) |
+| Sistema Linux | Ubuntu Server LTS + Nginx |
 | Firewall | pfSense |
 | Backup | Veeam Community Edition ou scripts de snapshot |
 
@@ -56,7 +56,7 @@ graph TB
 - [x] Promoção a Controlador de Domínio (domínio `italia.local`)
 - [x] Instalação e configuração do DNS
 - [x] Instalação, autorização e configuração de escopo do DHCP (`192.168.10.50-100`)
-- [ ] Criação da VM Linux com serviço (Nginx ou banco de dados)
+- [x] Criação da VM Linux com serviço (Ubuntu Server + Nginx)
 - [ ] Deploy do pfSense e segmentação de rede
 - [ ] Implementação da rotina de backup (RPO/RTO documentado)
 - [ ] Hardening básico de segurança
@@ -66,7 +66,7 @@ graph TB
 ```
 /
 ├── README.md
-├── DECISIONS.md
+├── DECISÕES.md
 ├── screenshots/   # capturas de tela numeradas, na ordem em que as etapas foram feitas
 └── scripts/       # scripts de automação (ex: backup), conforme forem criados
 ```
