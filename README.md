@@ -19,7 +19,7 @@ graph TB
     subgraph Internet["Internet (NAT do host)"]
     end
 
-    subgraph pfSense["pfSense (Firewall / Gateway)"]
+    subgraph pfSense["PFSENSE-FW01 (Firewall / Gateway) — 192.168.10.1 / 192.168.20.1"]
     end
 
     subgraph VMnet2["VMnet2 - Rede de Servidores (192.168.10.0/24)"]
@@ -28,7 +28,7 @@ graph TB
     end
 
     subgraph VMnet3["VMnet3 - Rede de Clientes/DMZ (192.168.20.0/24)"]
-        CLIENTS["Clientes / DMZ<br/>(a definir)"]
+        CLIENTS["Clientes / DMZ<br/>(a definir)<br/>libera apenas DNS:53 e HTTP:80"]
     end
 
     Internet --- pfSense
@@ -44,7 +44,7 @@ graph TB
 | Hypervisor | VMware Workstation Pro |
 | Sistema Windows | Windows Server 2022 Evaluation |
 | Sistema Linux | Ubuntu Server LTS + Nginx |
-| Firewall | pfSense |
+| Firewall | pfSense CE 2.7.2 |
 | Backup | Veeam Community Edition ou scripts de snapshot |
 
 ## Progresso
@@ -57,7 +57,7 @@ graph TB
 - [x] Instalação e configuração do DNS
 - [x] Instalação, autorização e configuração de escopo do DHCP (`192.168.10.50-100`)
 - [x] Criação da VM Linux com serviço (Ubuntu Server + Nginx)
-- [ ] Deploy do pfSense e segmentação de rede
+- [x] Deploy do pfSense e segmentação de rede (regras de firewall entre VMnet2 e VMnet3)
 - [ ] Implementação da rotina de backup (RPO/RTO documentado)
 - [ ] Hardening básico de segurança
 
