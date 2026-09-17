@@ -1,6 +1,6 @@
 # Decisões técnicas
 
-Registro do "porquê" de cada escolha do projeto — útil tanto para revisar o próprio raciocínio quanto para apresentar em entrevistas.
+Registro do "porquê" de cada escolha do projeto.
 
 ## Hypervisor: VMware Workstation Pro
 
